@@ -1,9 +1,14 @@
-# Abschlussprojekt – Sodemann (Batch: web002)
+# Abschlussprojekt für Modul 2/4 – Sodemann
 
 **Modul:** 2/4 – Webentwicklung (Syntax Institut, Berlin)
 
 Dashboard zur Visualisierung globaler KPIs (Bevölkerung, Fläche, BIP) sowie eine Länderanalyse mit interaktiver SVG-Weltkarte.  
 Datenquellen: **World Bank API**, **REST Countries API** und **Wikidata (SPARQL)**.
+
+## Links
+
+- Live Demo https://soeren-sodemann.github.io/Laenderanalayse-Dashboard/
+- Repository https://github.com/Soeren-Sodemann/Laenderanalayse-Dashboard
 
 **Mindestanforderungen:**
 
