@@ -6,6 +6,7 @@ Dashboard zur Visualisierung globaler KPIs (Bevölkerung, Fläche, BIP) sowie ei
 Datenquellen: **World Bank API**, **REST Countries API** und **Wikidata (SPARQL)**.
 
 **Mindestanforderungen:**
+
 - API-Anbindung
 - Fehlerhandling für API-Requests
 - Responsives Design (Desktop + Mobile)
@@ -13,13 +14,17 @@ Datenquellen: **World Bank API**, **REST Countries API** und **Wikidata (SPARQL)
 ---
 
 # Projekt
- Ziel: Globale Kennzahlen schnell erfassen und Länder im Detail analysieren.
+
+Ziel: Globale Kennzahlen schnell erfassen und Länder im Detail analysieren.
+
 ## Tech-Stack
+
 - HTML, CSS, Vanilla JavaScript
 - World Bank API, REST Countries API, Wikidata (Hauptstädte via SPARQL)
 - SVG World Map (Blank Map)
 
 ## Features
+
 - Übersicht: KPIs für Weltbevölkerung, Fläche, BIP (inkl. Datenstand)
 - Bevölkerung nach Kontinenten (Werte + Prozentanteil)
 - BIP-Wachstum der letzten 7 Jahre (Welt, Listenansicht)
@@ -35,37 +40,42 @@ Datenquellen: **World Bank API**, **REST Countries API** und **Wikidata (SPARQL)
 - Clean Code + Kommentare
 
 ## Bekannte Einschränkungen
-- Einige Bereiche sind als **(in Arbeit)** markiert und deaktiviert.  
+
+- Einige Bereiche sind als **(in Arbeit)** markiert und deaktiviert.
 - Loading-/Empty-/Error-States sind noch nicht auf allen Seiten komplett vereinheitlicht.
 
 ## Screenshots
+
 ### Darkmode
+
 - Übersichtseite:
-![Overview Site](./assets/screenshots/uebersicht.png)
+  ![Overview Site](./assets/screenshots/uebersicht.png)
 
 - Länderanalyse-Seite:
-![Country Analysis Site](./assets/screenshots/laenderanalyse.png)
+  ![Country Analysis Site](./assets/screenshots/laenderanalyse.png)
 
 - Länderanalyse-Seite (aktiv):
-![Country Analysis Site active](./assets/screenshots/laenderanalyse-aktiv.png)
+  ![Country Analysis Site active](./assets/screenshots/laenderanalyse-aktiv.png)
 
 - Einstellungen-Seite:
-![Settings Site](./assets/screenshots/einstellungen.png)
+  ![Settings Site](./assets/screenshots/einstellungen.png)
 
 ### Lightmode
+
 - Übersichtseite:
-![Overview Site Lightmode](./assets/screenshots/uebersicht-light.png)
+  ![Overview Site Lightmode](./assets/screenshots/uebersicht-light.png)
 
 - Länderanalyse-Seite:
-![Country Analysis Site Lightmode](./assets/screenshots/laenderanalyse-light.png)
+  ![Country Analysis Site Lightmode](./assets/screenshots/laenderanalyse-light.png)
 
 - Länderanalyse-Seite (aktiv):
-![Country Analysis Site active Lightmode](./assets/screenshots/laenderanalyse-aktiv-light.png)
+  ![Country Analysis Site active Lightmode](./assets/screenshots/laenderanalyse-aktiv-light.png)
 
 - Einstellungen-Seite:
-![Settings Site Lightmode](./assets/screenshots/einstellungen-light.png)
+  ![Settings Site Lightmode](./assets/screenshots/einstellungen-light.png)
 
 ## Datenquellen
+
 - [World Bank API](https://data.worldbank.org/)  
   KPIs, Kontinent-Gruppen, BIP-Wachstum (Konfiguration: `js/overview/config.js`)
 - [REST Countries API](https://restcountries.com/)  
@@ -74,11 +84,13 @@ Datenquellen: **World Bank API**, **REST Countries API** und **Wikidata (SPARQL)
   Hauptstädte (Export: `data/capitals-de.json`)
 
 ## Lokales Starten
-- `overview.html` mit VS Code **Live Server** starten (wegen `type="module"`).
+
+- `index.html` mit VS Code **Live Server** starten (wegen `type="module"`).
 - Von dort aus zu `Länderanalyse` und `Einstellungen` navigieren.
 
 ## Struktur
-- `overview.html` – Dashboard (Startseite)
+
+- `index.html` – Dashboard (Startseite)
 - `pages/country-analysis.html` – Länderanalyse mit SVG-Map + Detail-Popover
 - `pages/settings.html` – Einstellungen
 
@@ -123,6 +135,7 @@ Datenquellen: **World Bank API**, **REST Countries API** und **Wikidata (SPARQL)
 ## To-Do
 
 ### Übersichtsseite
+
 - [x] Welt-KPIs (Bevölkerung, Fläche, BIP) anzeigen
 - [x] Bevölkerung nach Kontinenten (Werte + Prozentanteil)
 - [x] BIP-Wachstum der letzten 7 Jahre (Welt, Listenansicht)
@@ -136,6 +149,7 @@ Datenquellen: **World Bank API**, **REST Countries API** und **Wikidata (SPARQL)
 - [ ] Dokumentation weiter verbessern
 
 ### Länderanalyse-Seite
+
 - [x] Interaktive SVG-Weltkarte (Hover + Klick auf Länder)
 - [x] Datenanbindung für Länderanalyse (REST Countries)
 - [x] Tooltip für Ländernamen (deutsch) beim Hover
@@ -153,6 +167,7 @@ Datenquellen: **World Bank API**, **REST Countries API** und **Wikidata (SPARQL)
 - [ ] Zoom auf ausgewähltes Land
 
 ### Einstellungen
+
 - [x] Grundstruktur der Seite erstellen (HTML + CSS)
 - [x] Theme-Switching (hell/dunkel/system)
 - [x] Theme-Präferenz speichern (localStorage)
@@ -161,5 +176,6 @@ Datenquellen: **World Bank API**, **REST Countries API** und **Wikidata (SPARQL)
 - [ ] Sprache wechseln
 
 ### Hinweis zu Statusmarkierungen
+
 - [x] Markierte Punkte sind abgeschlossen
 - [ ] Markierte Punkte sind offen / noch nicht begonnen
