@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/svg/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="alternate icon"
+      href="./assets/png/favicon.png"
+      type="image/png"
+    />
+    <title>Übersicht</title>
+    <link rel="stylesheet" href="./css/basic.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/overview-page.css" />
+    <script src="./js/shared/preferences.js" defer></script>
+    <script type="module" src="js/overview/app.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <!-- HEADER -->
+      <header class="header app-header">
+        <h1>Übersicht</h1>
+        <p>Globale Kennzahlen im Überblick.</p>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Seitennavigation">
+        <nav class="sidebar-nav">
+          <a
+            class="sidebar-link active"
+            href="overview.html"
+            aria-current="page"
+            >Übersicht</a
+          >
+          <a class="sidebar-link" href="./pages/country-analysis.html"
+            >Länderanalyse</a
+          >
+          <span class="sidebar-link is-disabled" aria-disabled="true"
+            >Vergleich <span class="sidebar-hint">(in Arbeit)</span></span
+          >
+          <span class="sidebar-link is-disabled" aria-disabled="true"
+            >Berichte <span class="sidebar-hint">(in Arbeit)</span></span
+          >
+        </nav>
+        <nav class="sidebar-nav sidebar-nav-secondary">
+          <span class="sidebar-link is-disabled" aria-disabled="true"
+            >Hilfe <span class="sidebar-hint">(in Arbeit)</span></span
+          >
+          <a class="sidebar-link" href="./pages/settings.html">Einstellungen</a>
+        </nav>
+        <footer>
+          <p>© 2026 by Sören Sodemann</p>
+        </footer>
+      </aside>
+
+      <div class="content">
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+          <section class="overview-cards">
+            <div class="overview-card">
+              <div class="card-header">
+                <span class="card-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="8" cy="8" r="3"></circle>
+                    <circle cx="16" cy="8" r="3"></circle>
+                    <path d="M3 20c0-3 3-5 5-5s5 2 5 5"></path>
+                    <path d="M11 20c0-3 3-5 5-5s5 2 5 5"></path>
+                  </svg>
+                </span>
+                <span class="badge badge-muted" id="population-badge"
+                  >Stand: —</span
+                >
+              </div>
+              <h2>Bevölkerung</h2>
+              <p id="population-value"></p>
+            </div>
+            <div class="overview-card">
+              <div class="card-header">
+                <span class="card-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="4" y="4" width="16" height="16" rx="3"></rect>
+                    <path d="M4 10h16"></path>
+                    <path d="M10 4v16"></path>
+                  </svg>
+                </span>
+                <span class="badge badge-muted" id="area-badge">Stand: —</span>
+              </div>
+              <h2>Fläche (km²)</h2>
+              <p id="area-value"></p>
+            </div>
+            <div class="overview-card">
+              <div class="card-header">
+                <span class="card-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 16l5-5 4 4 7-7"></path>
+                    <path d="M20 7v5h-5"></path>
+                  </svg>
+                </span>
+                <span class="badge badge-muted" id="gdp-badge">Stand: —</span>
+              </div>
+              <h2>BIP (USD)</h2>
+              <p id="gdp-value"></p>
+            </div>
+          </section>
+
+          <section class="overview-charts">
+            <div class="chart-container" id="population-panel">
+              <div class="chart-header">
+                <div class="chart-title">
+                  <span class="card-icon is-small" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="8"></circle>
+                      <path d="M12 4v8l6 3"></path>
+                    </svg>
+                  </span>
+                  <h3>Bevölkerungsverteilung nach Kontinenten</h3>
+                </div>
+                <span class="badge badge-muted" id="population-chart-badge"
+                  >Stand: —</span
+                >
+              </div>
+            </div>
+            <div class="chart-container" id="gdp-panel">
+              <div class="chart-header">
+                <div class="chart-title">
+                  <span class="card-icon is-small" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4 18h16"></path>
+                      <path d="M7 18V10"></path>
+                      <path d="M12 18V6"></path>
+                      <path d="M17 18v-8"></path>
+                    </svg>
+                  </span>
+                  <h3>BIP-Wachstum der letzten 7 Jahre</h3>
+                </div>
+                <span class="badge badge-muted" id="gdp-chart-badge"></span>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

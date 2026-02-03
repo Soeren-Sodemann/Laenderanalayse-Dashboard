@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+
+  <style>
+    /* Default: Dark Mode */
+    .bg { fill: #0f1115; }
+    .fg { fill: #4fd1c5; }
+    .stroke { stroke: #4fd1c5; }
+
+    /* Light Mode */
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #ffffff; }
+      .fg { fill: #0f766e; }
+      .stroke { stroke: #0f766e; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="16" height="16" rx="3" class="bg"></rect>
+
+  <!-- Bars -->
+  <rect x="4" y="9" width="2" height="4" rx="0.5" class="fg"></rect>
+  <rect x="7" y="7" width="2" height="6" rx="0.5" class="fg"></rect>
+  <rect x="10" y="5" width="2" height="8" rx="0.5" class="fg"></rect>
+
+  <!-- Growth arrow -->
+  <path d="M3 10 C6 8, 9 6, 12 4" fill="none" stroke-width="1" stroke-linecap="round" class="stroke"></path>
+
+  <path d="M11 3 L13 3 L13 5" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="stroke"></path>
+</svg>

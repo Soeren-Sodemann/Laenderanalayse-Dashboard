@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/svg/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="alternate icon"
+      href="../assets/png/favicon.png"
+      type="image/png"
+    />
+    <title>Einstellungen</title>
+    <link rel="stylesheet" href="../css/basic.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/settings-page.css" />
+    <script src="../js/shared/preferences.js" defer></script>
+    <script src="../js/settings/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <!-- HEADER -->
+      <header class="header app-header">
+        <h1>Einstellungen</h1>
+        <p>Systemeinstellungen für Dashboard und Analyse.</p>
+      </header>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Seitennavigation">
+        <nav class="sidebar-nav">
+          <a class="sidebar-link" href="../overview.html">Übersicht</a>
+          <a class="sidebar-link" href="./country-analysis.html"
+            >Länderanalyse</a
+          >
+          <span class="sidebar-link is-disabled" aria-disabled="true"
+            >Vergleich <span class="sidebar-hint">(in Arbeit)</span></span
+          >
+          <span class="sidebar-link is-disabled" aria-disabled="true"
+            >Berichte <span class="sidebar-hint">(in Arbeit)</span></span
+          >
+        </nav>
+        <nav class="sidebar-nav sidebar-nav-secondary">
+          <span class="sidebar-link is-disabled" aria-disabled="true"
+            >Hilfe <span class="sidebar-hint">(in Arbeit)</span></span
+          >
+          <a
+            class="sidebar-link active"
+            href="settings.html"
+            aria-current="page"
+            >Einstellungen</a
+          >
+        </nav>
+        <footer>
+          <p>© 2026 by Sören Sodemann</p>
+        </footer>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="content">
+        <main class="main-content">
+          <section class="settings-section">
+            <h2>Dashboard</h2>
+            <div class="setting-item is-disabled">
+              <label for="dashboard-select"
+                >Startseite wählen:
+                <span class="status-hint">(in Arbeit)</span></label
+              >
+              <select id="dashboard-select" name="dashboard-select" disabled>
+                <option value="overview-page">Übersicht</option>
+                <option value="country-analysis-page">Länderanalyse</option>
+                <option value="comparison-page">Vergleich</option>
+                <option value="report-page">Bericht</option>
+                <option value="help-page">Hilfe</option>
+                <option value="settings-page">Einstellungen</option>
+              </select>
+            </div>
+            <div class="setting-item">
+              <label for="theme-select"> Theme:</label>
+              <select id="theme-select" name="theme-select">
+                <option value="dark">Dunkel</option>
+                <option value="light">Hell</option>
+                <option value="system">Systemstandard</option>
+              </select>
+            </div>
+            <div class="setting-item is-disabled">
+              <label for="language-select"
+                >Sprache: <span class="status-hint">(in Arbeit)</span></label
+              >
+              <select id="language-select" name="language-select" disabled>
+                <option value="de">Deutsch</option>
+                <option value="en">Englisch</option>
+              </select>
+            </div>
+            <div class="setting-item is-disabled">
+              <label for="default-view-select"
+                >Default Ansicht:
+                <span class="status-hint">(in Arbeit)</span></label
+              >
+              <select id="default-view-select" name="default-view-select" disabled>
+                <option value="card-view">Kartenansicht</option>
+                <option value="list-view">Listenansicht</option>
+              </select>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <h2>Daten</h2>
+            <div class="setting-item is-disabled">
+              <label for="auto-refresh-toggle"
+                >Automatisch aktualisieren: <br>
+                <span class="status-hint">(in Arbeit)</span></label
+              >
+              <label class="toggle">
+                <input
+                  id="auto-refresh-toggle"
+                  name="auto-refresh-toggle"
+                  type="checkbox"
+                  checked
+                  disabled
+                />
+                <span class="toggle-track" aria-hidden="true"></span>
+              </label>
+            </div>
+            <div class="setting-item is-disabled">
+              <label for="formatting-select"
+                >Zahlenformat: <span class="status-hint">(in Arbeit)</span></label
+              >
+              <select id="formatting-select" name="formatting-select" disabled>
+                <option value="de-formatting">1.000.000</option>
+                <option value="us-formatting">1,000,000</option>
+              </select>
+            </div>
+            <div class="setting-item is-disabled">
+              <label for="cache-toggle"
+                >Cache: <span class="status-hint">(in Arbeit)</span></label
+              >
+              <label class="toggle">
+                <input
+                  id="cache-toggle"
+                  name="cache-toggle"
+                  type="checkbox"
+                  checked
+                  disabled
+                />
+                <span class="toggle-track" aria-hidden="true"></span>
+              </label>
+            </div>
+            <div class="setting-item is-disabled">
+              <label for="cache-clear-select"
+                >Cache Löschen:
+                <span class="status-hint">(in Arbeit)</span></label
+              >
+              <button id="clear-cache-button" type="button" disabled>
+                Cache Löschen
+              </button>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <h2>Barrierefreiheit</h2>
+            <div class="setting-item is-disabled">
+              <label for="contrast-select"
+                >Kontraststufe:
+                <span class="status-hint">(in Arbeit)</span></label
+              >
+              <select id="contrast-select" name="contrast-select" disabled>
+                <option value="normal-contrast">Normal</option>
+                <option value="high-contrast">Hoher Kontrast</option>
+              </select>
+            </div>
+            <div class="setting-item is-disabled">
+              <label for="focus-select"
+                >Fokus hervorheben:
+                <span class="status-hint">(in Arbeit)</span></label
+              >
+              <select id="focus-select" name="focus-select" disabled>
+                <option value="normal-focus">Normal</option>
+                <option value="enhanced-focus">Erweiterter Fokus</option>
+              </select>
+            </div>
+            <div class="setting-item is-disabled">
+              <label for="reduce-animations-toggle"
+                >Animationen reduzieren: <br>
+                <span class="status-hint">(in Arbeit)</span></label
+              >
+              <label class="toggle">
+                <input
+                  id="reduce-animations-toggle"
+                  name="reduce-animations-toggle"
+                  type="checkbox"
+                  disabled
+                />
+                <span class="toggle-track" aria-hidden="true"></span>
+              </label>
+            </div>
+            <div class="setting-item is-disabled">
+              <label for="tooltips-toggle"
+                >Tooltips: <span class="status-hint">(in Arbeit)</span></label
+              >
+              <label class="toggle">
+                <input
+                  id="tooltips-toggle"
+                  name="tooltips-toggle"
+                  type="checkbox"
+                  checked
+                  disabled
+                />
+                <span class="toggle-track" aria-hidden="true"></span>
+              </label>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <h2>Info</h2>
+            <div class="setting-item">
+              <label for="contrast-select">Version:</label>
+              <span class="settings-link" value="version-1.0.0">1.0.0</span>
+            </div>
+            <div class="setting-item">
+              <label for="contrast-select">Quelle//Link:</label>
+              <span value="link-world-bank-api"
+                ><a
+                  class="settings-link"
+                  href="https://data.worldbank.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >World Bank API</a
+                ></span
+              >
+            </div>
+            <div class="setting-item">
+              <label for="contrast-select">Quelle//Link:</label>
+              <span value="link-restcountry-api"
+                ><a
+                  class="settings-link"
+                  href="https://restcountries.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >RESTCountries API</a
+                ></span
+              >
+            </div>
+            <div class="setting-item">
+              <label for="contrast-select">Quelle//Link:</label>
+              <span value="link-wikidata"
+                ><a
+                  class="settings-link"
+                  href="https://query.wikidata.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Wikidata</a
+                ></span
+              >
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
